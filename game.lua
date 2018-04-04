@@ -95,12 +95,12 @@ local function createAsteroid()
         newAsteroid:setLinearVelocity( math.random( -40,40 ), math.random( 40,120 ) )
     elseif (whereFrom == 3 ) then
         -- From the right
-        newAsteroid.x = dusplay.contentWidth + 60
+        newAsteroid.x = display.contentWidth + 60
         newAsteroid.y = math.random( 500 )
         newAsteroid:setLinearVelocity( math.random( -120,-40 ), math.random( 20,60 ) )
     end
 
-    newAsteroid:applyTorque( math.radnom( -6,6 ) )
+    newAsteroid:applyTorque( math.random( -6,6 ) )
 end
 
 
@@ -254,7 +254,7 @@ function scene:create( event )
   mainGroup = display.newGroup()  -- Display group for the ship, asteroids, lasers, etc.
   sceneGroup:insert( mainGroup )  -- Insert into the scene's view group
 
-  UiGroup = display.newGroup()    -- Display group for UI objects like the score
+  uiGroup = display.newGroup()    -- Display group for UI objects like the score
   sceneGroup:insert( uiGroup )    -- Insert into the scene's view group
 
   -- Load the background
