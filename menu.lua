@@ -31,7 +31,7 @@ function scene:create( event )
 		background.x = display.contentCenterX
 		background.y = display.contentCenterY
 
-		local title = display.newImageRect( screneGroup, "title.png", 500, 80 )
+		local title = display.newImageRect( sceneGroup, "title.png", 500, 80 )
 		title.x = display.contentCenterX
 		title.y = 200
 
@@ -39,10 +39,10 @@ function scene:create( event )
 		playButton:setFillColor( 0.82, 0.86, 1 )
 
 		local highScoresButton = display.newText( sceneGroup, "High Scores", display.contentCenterX, 810, native.systemFont, 44 )
-		highScoresButton:SetFillColor( 0.75, 0.78, 1 )
+		highScoresButton:setFillColor( 0.75, 0.78, 1 )
 
 		playButton:addEventListener( "tap", gotoGame )
-		highsScoresButton:addEventListener( "tap", gotoHighScores )
+		highScoresButton:addEventListener( "tap", gotoHighScores )
 end
 
 
