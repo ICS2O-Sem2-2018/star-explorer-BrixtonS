@@ -52,7 +52,7 @@ height = 40
 local objectSheet = graphics.newImageSheet( "gameObjects.png", sheetOptions )
 
 -- Initialize variables
-local lives = 3
+local lives = 100
 local score = 0
 local died = false
 
@@ -69,7 +69,7 @@ local uiGroup
 
 local explosionSound
 local fireSound
-local musicTrack
+local musciTrack
 
 
 local function updateText()
@@ -291,7 +291,7 @@ function scene:create( event )
 
   explosionSound = audio.loadSound( "audio/explosion.wav" )
   fireSound = audio.loadSound( "audio/fire.wav" )
-  musicTrack = audio.loadStream( "audio/80s-Space-Game_Looping.wav")
+  musicTrack = audio.loadStream( "audio/theme.mp3" )
 end
 
 
